@@ -54,13 +54,13 @@ const App = () => {
     <>
       <SafeAreaView style={styles.full}>
         <View>
-          <TouchableOpacity onPress={join}>
+          <TouchableOpacity onPress={join} style={styles.btn}>
             <Text>Join</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={send}>
+          <TouchableOpacity onPress={send} style={styles.btn}>
             <Text>Send</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={leave}>
+          <TouchableOpacity onPress={leave} style={styles.btn}>
             <Text>Leave</Text>
           </TouchableOpacity>
         </View>
@@ -70,7 +70,13 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-  full: {flex: 1},
+  full: {flex: 1, margin: '10%'},
+  btn: {
+    width: '100%',
+    backgroundColor: '#55AAFF',
+    marginBottom: '10%',
+    padding: 10,
+  },
 });
 
 export default App;
